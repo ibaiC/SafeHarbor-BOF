@@ -1,4 +1,4 @@
-# Safe Harbor
+# Safe Harbor BOF
 Safe Harbor is a Beacon Object File (BOF) tool for Windows that streamlines process reconnaissance for red team operations. It identifies trusted, appropriate target processes to maintain stealth and robust operational security (OPSEC) during post-exploitation activities.
 
 ## Features
