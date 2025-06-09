@@ -383,9 +383,9 @@ extern "C" {
                 my_strcat(nameLine, " ");
             }
 
-            my_strcat(line, "  "); // two leading spaces
+            my_strcat(line, "  ");
             my_strcat(line, pidLine);
-            my_strcat(line, "   "); // three spaces
+            my_strcat(line, "   ");
             my_strcat(line, nameLine);
             my_strcat(line, "\n");
 
