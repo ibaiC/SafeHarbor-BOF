@@ -1,0 +1,24 @@
+﻿  
+  Microsoft (R) Program Maintenance Utility Version 14.34.31935.0
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  
+  Microsoft (R) Program Maintenance Utility Version 14.34.31935.0
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  	cl /c /GS- /std:c++17 /Fo"x64\Release\bof.obj" bof.cpp
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.34.31935 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  bof.cpp
+bof.cpp(40): warning C4005: 'EnumProcesses': macro redefinition
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\psapi.h(119): note: see previous definition of 'EnumProcesses'
+bof.cpp(41): warning C4005: 'EnumProcessModules': macro redefinition
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\psapi.h(62): note: see previous definition of 'EnumProcessModules'
+bof.cpp(42): warning C4005: 'GetModuleFileNameExA': macro redefinition
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\psapi.h(96): note: see previous definition of 'GetModuleFileNameExA'
+  	copy "x64\Release\\*.obj" "..\x64\Release\"
+  x64\Release\\bof.obj
+          1 file(s) copied.
+  	del /F "..\x64\Release\\*.x64.o"
+  	ren "..\x64\Release\*.obj" "*.x64.o"

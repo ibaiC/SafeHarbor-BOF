@@ -1,0 +1,28 @@
+﻿  
+  Microsoft (R) Program Maintenance Utility Version 14.34.31935.0
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  
+  Microsoft (R) Program Maintenance Utility Version 14.34.31935.0
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  	cl /Zi /MTd /D_DEBUG /EHsc /std:c++17 /Fox64\Debug\ /Fdx64\Debug\ /Fe"..\x64\Debug\bof.exe" bof.cpp base/mock.cpp
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.34.31935 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  bof.cpp
+bof.cpp(40): warning C4005: 'EnumProcesses': macro redefinition
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\psapi.h(119): note: see previous definition of 'EnumProcesses'
+bof.cpp(41): warning C4005: 'EnumProcessModules': macro redefinition
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\psapi.h(62): note: see previous definition of 'EnumProcessModules'
+bof.cpp(42): warning C4005: 'GetModuleFileNameExA': macro redefinition
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\psapi.h(96): note: see previous definition of 'GetModuleFileNameExA'
+  mock.cpp
+  Generating Code...
+  Microsoft (R) Incremental Linker Version 14.34.31935.0
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  /debug 
+  /out:..\x64\Debug\bof.exe 
+  x64\Debug\bof.obj 
+  x64\Debug\mock.obj 
