@@ -11,6 +11,8 @@ Safe Harbor is a Beacon Object File (BOF) tool for Windows that streamlines proc
 ## Usage
 Compile the project. Once built, load the .cna script into Cobalt Strike and run it on the target system through the `safe_harbor` command.
 
+![image](https://github.com/user-attachments/assets/3722c127-c0e8-4b17-9b40-83b9dd47fcf8)
+
 ## Future Improvements
 Targeted Enumeration: Allow operators to specify a PID to scan a particular process instead of all processes.
 Optimized Handle Usage: Reduce the number of handles requested to further lower telemetry.
