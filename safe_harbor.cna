@@ -1,0 +1,47 @@
+# Aggressor Script for safe_harbor BOF
+#
+# This script registers a new command "safe_harbor" in the Beacon console.
+# Running "safe_harbor" will execute the BOF that enumerates processes, checks for modules,
+# RWX memory segments, .NET presence, and whether the process is signed.
+#
+# The BOF should be located in the same directory as this script as safe_harbor.x64.o.
+# If you have different architectures, you can store multiple object files (e.g., safe_harbor.x64.o, safe_harbor.x86.o)
+# and let the script pick the correct one based on the architecture of the target Beacon.
+
+beacon_command_register(
+    "safe_harbor",
+    "Run the safe_harbor BOF",
+    "
+Command: safe_harbor
+Summary: Enumerates processes for the current user session and displays:
+         - Interesting modules (wininet.dll, winhttp.dll)
+         - RWX private memory regions
+         - Whether the process is a .NET process
+         - If the main binary is signed
+
+Usage:   safe_harbor
+
+Example:
+         safe_harbor
+
+Note: This command does not take any arguments.
+"
+);
+
+alias safe_harbor {
+    local('$bid $barch $handle $data $args');
+
+    $bid    = $1;
+    $barch  = barch($1);
+
+    # Open and read the appropriate BOF file based on architecture
+    $handle = openf(script_resource("safe_harbor.$barch.o"));
+    $data   = readb($handle, -1);
+    closef($handle);
+
+    # Since this BOF doesn't take arguments, we don't pack any.
+    $args = bof_pack($bid);
+
+    # Execute the BOF inline
+    beacon_inline_execute($bid, $data, "go", $args);
+}
