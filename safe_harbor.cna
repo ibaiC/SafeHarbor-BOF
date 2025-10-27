@@ -10,7 +10,7 @@
 
 beacon_command_register(
     "safe_harbor",
-    "Run the safe_harbor BOF",
+    "Enumerates processes for the current user session finding prime injection targets.",
     "
 Command: safe_harbor
 Summary: Enumerates processes for the current user session and displays:
@@ -45,3 +45,4 @@ alias safe_harbor {
     # Execute the BOF inline
     beacon_inline_execute($bid, $data, "go", $args);
 }
+
